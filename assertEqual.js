@@ -1,9 +1,12 @@
+// FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
-  // If actual is equal to expected then we would want to print assertion passed otherwise print assertion failed
   if (actual === expected) {
-    console.log(`Assertion passed! ${actual} === ${expected}`);
+    return true;
+    // console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion failed! ${actual} !== ${expected}`);
+    return false;
+    // console.log(`🚨 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-assertEqual("Lighthouse labs", "Bootcamp");
+
+module.exports = assertEqual;
